@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "experimentalDecorators": true,
+    "rootDir": "./src",
+    "lib": ["es2015", "dom"],
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "ngfactory",
+    "build",
+    "tmp",
+    "dist",
+    "node_modules"
+  ]
+}
