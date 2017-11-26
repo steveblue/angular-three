@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { WindowRef } from '../../services/window.service';
 import { PerspectiveCamera, Scene, BoxGeometry, MeshNormalMaterial, Mesh, WebGLRenderer } from 'three';
 
@@ -9,7 +9,7 @@ import { PerspectiveCamera, Scene, BoxGeometry, MeshNormalMaterial, Mesh, WebGLR
   styleUrls: ['scene.component.css']
 })
 
-export class SceneComponent implements OnInit, OnDestroy {
+export class SceneComponent implements OnInit {
 
   @ViewChild('canvas') canvas: ElementRef;
   window: Window;
@@ -41,8 +41,8 @@ export class SceneComponent implements OnInit, OnDestroy {
     this.scene.add( this.mesh );
 
     this.renderer = new WebGLRenderer( { antialias: true, canvas: this.canvas.nativeElement } );
-    this.renderer['setSize'](this.window.innerWidth, this.window.innerHeight );
-    this._window.nativeWindow.document.body.appendChild( this.renderer['domElement'] );
+    this.renderer.setSize(this.window.innerWidth, this.window.innerHeight );
+    this._window.nativeWindow.document.body.appendChild( this.renderer.domElement );
 
     this.animate();
 
@@ -55,14 +55,9 @@ export class SceneComponent implements OnInit, OnDestroy {
     this.mesh.rotation.x += 0.01;
     this.mesh.rotation.y += 0.02;
 
-    this.renderer['render'](this.scene, this.camera);
+    this.renderer.render(this.scene, this.camera);
 
   }
 
-  ngOnDestroy() {
-
-
-
-  }
 
 }
