@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild, OnInit, OnDestroy } from '@angular/core';
 import { WindowRef } from '../../services/window.service';
-
-declare let THREE: any;
+import { PerspectiveCamera, Scene, BoxGeometry, MeshNormalMaterial, Mesh, WebGLRenderer } from 'three';
 
 @Component({
   moduleId: module.id,
@@ -30,18 +29,18 @@ export class SceneComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    this.camera = new THREE.PerspectiveCamera( 70, this.window.innerWidth / this.window.innerHeight, 0.01, 10 );
+    this.camera = new PerspectiveCamera( 70, this.window.innerWidth / this.window.innerHeight, 0.01, 10 );
     this.camera.position.z = 1;
 
-    this.scene = new THREE.Scene();
+    this.scene = new Scene();
 
-    this.geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-    this.material = new THREE.MeshNormalMaterial();
+    this.geometry = new BoxGeometry( 0.2, 0.2, 0.2 );
+    this.material = new MeshNormalMaterial();
 
-    this.mesh = new THREE.Mesh( this.geometry, this.material );
+    this.mesh = new Mesh( this.geometry, this.material );
     this.scene.add( this.mesh );
 
-    this.renderer = new THREE.WebGLRenderer( { antialias: true, canvas: this.canvas.nativeElement } );
+    this.renderer = new WebGLRenderer( { antialias: true, canvas: this.canvas.nativeElement } );
     this.renderer['setSize'](this.window.innerWidth, this.window.innerHeight );
     this._window.nativeWindow.document.body.appendChild( this.renderer['domElement'] );
 

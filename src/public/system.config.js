@@ -47,7 +47,8 @@
       'rxjs/operator/concatAll': 'lib:rxjs/operator/concatAll',
       'rxjs/operator/mergeMap': 'lib:rxjs/operator/mergeMap',
       'rxjs/util/EmptyError': 'lib:rxjs/util/EmptyError',
-      'tslib': 'lib:tslib/tslib.js'
+      'tslib': 'lib:tslib/tslib.js',
+      'three': 'lib:three/build/three.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

@@ -1,1 +1,15 @@
-:host{background:#000}:host,canvas{width:100%;height:100%}canvas{position:absolute}
+/* line 1, src/app/shared/components/scene/scene.component.scss */
+:host {
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+/* line 7, src/app/shared/components/scene/scene.component.scss */
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNjZW5lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsa0VBQWtFO0FBQ2xFO0VBQ0UsWUFBWTtFQUNaLGFBQWE7RUFDYixrQkFBa0I7Q0FDbkI7O0FBRUQsa0VBQWtFO0FBQ2xFO0VBQ0UsWUFBWTtFQUNaLGFBQWE7RUFDYixtQkFBbUI7Q0FDcEIiLCJmaWxlIjoic2NlbmUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGxpbmUgMSwgc3JjL2FwcC9zaGFyZWQvY29tcG9uZW50cy9zY2VuZS9zY2VuZS5jb21wb25lbnQuc2NzcyAqL1xuOmhvc3Qge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBiYWNrZ3JvdW5kOiBibGFjaztcbn1cblxuLyogbGluZSA3LCBzcmMvYXBwL3NoYXJlZC9jb21wb25lbnRzL3NjZW5lL3NjZW5lLmNvbXBvbmVudC5zY3NzICovXG5jYW52YXMge1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG59XG4iXX0= */
