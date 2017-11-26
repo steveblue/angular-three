@@ -17,7 +17,8 @@
     "types": [
       "node",
       "jasmine",
-      "karma"
+      "karma",
+      "three"
     ],
     "lib": [
       "es2017",
@@ -28,7 +29,6 @@
     "skipMetadataEmit": true
   },
   "files": [
-    "./src/app/app.module.ts",
-    "./src/app/shared/components/lazy/lazy.module.ts"
+    "./src/app/app.module.ts"
   ]
 }

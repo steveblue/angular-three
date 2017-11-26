@@ -3,7 +3,7 @@
 const express = require('express');
 const router = require('express').Router();
 const compression = require('compression');
-const paths = require('./build.config.js');
+const paths = require('./ngr.config.js');
 
 module.exports = function(app) {
   'use strict';
@@ -39,7 +39,7 @@ module.exports = function(app) {
     res.sendFile('index.html', { root: process.cwd() + '/' + paths.build });
   });
 
-  
+
 
   return router;
 

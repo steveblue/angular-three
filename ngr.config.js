@@ -1,7 +1,3 @@
-require('shelljs/global');
-const fs = require('fs');
-const path = require('path');
-
 module.exports = {
     dep: {
         lib: [
@@ -13,20 +9,18 @@ module.exports = {
             'reflect-metadata/Reflect.js.map',
             'tslib/tslib.js',
             '@angular',
-            'rxjs'
+            'rxjs',
+            'three'
         ],
         prodLib: [
             'core-js/client/shim.min.js',
             'core-js/client/shim.min.js.map',
             'systemjs/dist/system.js',
-            'zone.js/dist/zone.js'
+            'zone.js/dist/zone.js',
+            'three/build/three.js'
         ],
         src: './node_modules',
         dist: './build/lib'
-    },
-    clean:{
-      files:[],
-      folders:[]
     },
     style: {
         sass: {
@@ -50,21 +44,7 @@ module.exports = {
     src: 'src',
     build: 'build',
     dist: 'dist',
-    lib: 'src/lib',
-    libFilename: 'default-lib',
     classPrefix: 'My',
     componentPrefix: 'cmp',
-    directivePrefix: 'dir',
-    buildHooks: {
-        dev: {
-            pre: () => {
-
-                return new Promise((res, rej) => {
-                    cp('lazy.config.json', './build/lazy.config.json');
-                    res();
-                });
-
-            }
-        }
-    }
+    directivePrefix: 'dir'
 }

@@ -5,8 +5,9 @@ const express = require('express');
 const http = require('http');
 const https = require('https');
 const fs = require('fs');
+var ip = require("ip");
 const app = express();
-const config = require('./build.config.js');
+const config = require('./ngr.config.js');
 const serverConfig = {
   dev: require('./server.config.dev.js'),
   prod: require('./server.config.prod.js')
@@ -97,7 +98,8 @@ const routes = require('./router')(app);
 
 server.listen(port);
 
-console.log('Express available at '+host+':'+port);
-
+console.log('Express available');
+console.log('Local: ' + host + ':' + port);
+console.log('On Your Network: '+ ip.address() + ':' + port)
 
 module.exports = app;

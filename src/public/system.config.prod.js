@@ -4,11 +4,6 @@
     'map': {
       'bundle': 'bundle.js',
       'vendor': 'vendor.js'
-    },
-    'meta': {
-      'bundle': {
-        deps: []
-      }
     }
   });
 })(this);

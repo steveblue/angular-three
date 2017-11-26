@@ -5,8 +5,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent }  from './app.component';
 import { routing }       from './app.routes';
-import { HomeModule } from './shared/components/home/home.module';
-import { LazyModule } from './shared/components/lazy/lazy.module';
+
+import { WindowRef } from './shared/services/window.service';
+import { SceneModule } from './shared/components/scene/scene.module';
 
 @NgModule({
 
@@ -14,11 +15,11 @@ import { LazyModule } from './shared/components/lazy/lazy.module';
                BrowserAnimationsModule,
                CommonModule,
                HttpClientModule,
-               HomeModule,
-               LazyModule,
+               SceneModule,
                routing],
     declarations: [ AppComponent ],
-    bootstrap:    [ AppComponent ]
+    bootstrap:    [ AppComponent ],
+    providers: [ WindowRef ]
 })
 
 export class AppModule {}
